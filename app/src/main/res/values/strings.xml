@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PixelCarrierSettings</string>
+    <string name="shizuku_permission_not_granted">Shizuku permission is not granted</string>
+    <string name="shizuku_not_running">Shizuku is not running. Please start Shizuku before using this app</string>
+    <string name="enable_voims">Enable VoLTE</string>
+    <string name="voims_enabled">VoLTE enabled</string>
+    <string name="voims_already_enabled">VoLTE is already enabled for this SIM</string>
+    <string name="reset_ims">Reset IMS</string>
+    <string name="ims_reset">IMS has been reset</string>
+    <string name="no_active_sim">No active SIM is found on this device</string>
+    <string name="config_overrides">Config overrides</string>
+    <string name="config_updated">Config updated</string>
+    <string name="config_reset">Config reset</string>
+    <string name="override_volte">Enable VoLTE</string>
+    <string name="override_vonr">Enable VoNR(Vo5G)</string>
+    <string name="override_nr_mode">Enable NR(5G) SA</string>
+    <string name="override_wfc">Enable VoWiFi</string>
+    <string name="override_5g_signal_threshold">Override 5G signal threshold</string>
+    <string name="reset_config">Reset to system default</string>
+    <string name="override_notes">NOTE: These settings are NOT persistent and will be reset upon system reboot.</string>
+    <string name="init_failed">Initialization failed</string>
+</resources>
