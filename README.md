@@ -2,7 +2,7 @@
 
 Enable VoLTE for carriers in unsupported regions on Pixel devices.
 
-Originally this app was made because I want to override specific configurations in one click. As of writing this, using `setImsProvisioningInt` (from [Ims](https://github.com/vvb2060/Ims)'s version 1.0, it doesn't have an UI) seems to be the only way to set VoLTE enabled persistently (explained below in "Override configurations" section), so I updated my app and made an UI for it.
+Originally this app was made because I want to override specific configurations in one click (5G SA and signal thresholds). As of writing this, using `setImsProvisioningInt` (from [Ims](https://github.com/vvb2060/Ims)'s version 1.0, it doesn't have an UI) seems to be the only way to set VoLTE enabled persistently (explained below in "Override configurations" section), so I updated my app and made an UI for it.
 
 ## Usage
 
@@ -35,3 +35,4 @@ If you need manual/custom overrides, please check out [Pixel IMS](https://github
 
 - [Pixel IMS](https://github.com/kyujin-cho/pixel-volte-patch)
 - [Ims](https://github.com/vvb2060/Ims)
+- [类原生5G信号差的解决办法](https://www.irvingwu.blog/posts/aosp-5g-signal-strength)
