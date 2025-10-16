@@ -13,11 +13,11 @@ Originally this app was made because I want to override specific configurations 
 3. Tap on Enable VoLTE
 4. Go to system settings - Network & internet - SIMs - select the one you have enabled VoLTE for - turn on VoLTE (or 4G calling, depending on the carrier config)
 
-- You may need to re-enable VoLTE in system settings if you reboot the system after using this method for the first time. Then it should stay on and there is no need to enable it again for the same SIM card. Unlike `overrideConfig`, this will not be reset after reboots or a system updates.
+- You may need to turn on VoLTE in system settings again if you reboot the system after using this method for the first time. Then it should stay on and there is no need to do it again for the same SIM card. Unlike `overrideConfig`, this will not be reset after reboots or system updates.
 
 ### Override configurations
 
-From "Config overrides" menu, you can override carrier configurations (the same as what Pixel IMS does, but these are some presets). However, starting with Android 16 QPR2 Beta 3, calling `overrideConfig` with `persistent=true` are no longer possible for non-system apps, so these settings will be reset upon system reboot.
+From "Config overrides" menu, you can override carrier configurations (the same as what Pixel IMS does, but these are some presets). However, starting with Android 16 QPR2 Beta 3, calling `overrideConfig` with `persistent=true` is no longer possible for non-system apps, so these settings will be reset upon system reboot.
 
 - **Enable VoLTE**: Sets `KEY_CARRIER_VOLTE_AVAILABLE_BOOL` to true, not needed if you use the Enable VoLTE option on the first screen.
 - **Enable NR(5G) SA**: Sets `KEY_CARRIER_NR_AVAILABILITIES_INT_ARRAY` to `[1, 2]` which enables both NSA and SA.
