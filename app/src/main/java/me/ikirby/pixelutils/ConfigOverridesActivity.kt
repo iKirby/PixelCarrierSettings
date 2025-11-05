@@ -36,6 +36,7 @@ class ConfigOverridesActivity : Activity() {
         binding.btnOverrideWFC.setOnClickListener { overrideWFC() }
         binding.btnOverride5GSignalThreshold.setOnClickListener { override5GSignalThreshold() }
         binding.btnResetConfig.setOnClickListener { resetConfig() }
+        binding.btnSignalInflate.setOnClickListener { overrideSignalInflate() }
     }
 
     override fun onMenuItemSelected(featureId: Int, item: MenuItem): Boolean {
@@ -121,6 +122,12 @@ class ConfigOverridesActivity : Activity() {
                 CarrierConfigManager.KEY_5G_NR_SSRSRP_THRESHOLDS_INT_ARRAY,
                 intArrayOf(-115, -105, -95, -85)
             )
+        }
+        overrideConfig(overrides)
+    }
+    private fun overrideSignalInflate() {
+        val overrides = PersistableBundle().apply {
+            putBoolean(CarrierConfigManager.KEY_INFLATE_SIGNAL_STRENGTH_BOOL, false)
         }
         overrideConfig(overrides)
     }

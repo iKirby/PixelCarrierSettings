@@ -55,6 +55,13 @@
             android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/btnSignalInflate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/signal_inflate"
+            android:textAllCaps="false" />
+
+        <Button
             android:id="@+id/btnResetConfig"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
