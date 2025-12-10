@@ -25,8 +25,10 @@ From "Config overrides" menu, you can override carrier configurations (the same 
 - **Enable VoWiFi**: Sets the following options to true.
     * `KEY_CARRIER_WFC_IMS_AVAILABLE_BOOL`
     * `KEY_CARRIER_WFC_SUPPORTS_WIFI_ONLY_BOOL`
+    * `KEY_CARRIER_DEFAULT_WFC_IMS_ROAMING_ENABLED_BOOL`
     * `KEY_EDITABLE_WFC_MODE_BOOL`
     * `KEY_EDITABLE_WFC_ROAMING_MODE_BOOL`
+    * `KEY_WFC_SPN_FORMAT_IDX_INT`
 - **Override 5G signal threshold**: Sets `KEY_5G_NR_SSRSRP_THRESHOLDS_INT_ARRAY` to `[-115, -105, -95, -85]`. This option exists because with AOSP's default values I only get 1 bar 5G signal in my area, but on other devices the signal are full or at least 2 bars (dBm values are the same).
 
 If you need manual/custom overrides, please check out [Pixel IMS](https://github.com/kyujin-cho/pixel-volte-patch).
