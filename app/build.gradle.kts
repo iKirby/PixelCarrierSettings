@@ -13,8 +13,8 @@ android {
         applicationId = "me.ikirby.pixelutils"
         minSdk = 34
         targetSdk = 36
-        versionCode = 10
-        versionName = "10"
+        versionCode = 11
+        versionName = "11"
         setProperty("archivesBaseName", "PixelCarrierSettings")
     }
 
