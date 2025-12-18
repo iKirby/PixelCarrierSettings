@@ -62,6 +62,13 @@
             android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/btnShowIMSStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/show_ims_status"
+            android:textAllCaps="false" />
+
+        <Button
             android:id="@+id/btnResetConfig"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -37,6 +37,7 @@ class ConfigOverridesActivity : Activity() {
         binding.btnOverride5GSignalThreshold.setOnClickListener { override5GSignalThreshold() }
         binding.btnResetConfig.setOnClickListener { resetConfig() }
         binding.btnSignalInflate.setOnClickListener { overrideSignalInflate() }
+        binding.btnShowIMSStatus.setOnClickListener { overrideShowIMSStatus() }
     }
 
     override fun onMenuItemSelected(featureId: Int, item: MenuItem): Boolean {
@@ -81,6 +82,13 @@ class ConfigOverridesActivity : Activity() {
     private fun overrideVoLTE() {
         val overrides = PersistableBundle().apply {
             putBoolean(CarrierConfigManager.KEY_CARRIER_VOLTE_AVAILABLE_BOOL, true)
+        }
+        overrideConfig(overrides)
+    }
+
+    private fun overrideShowIMSStatus() {
+        val overrides = PersistableBundle().apply {
+            putBoolean(CarrierConfigManager.KEY_SHOW_IMS_REGISTRATION_STATUS_BOOL, true)
         }
         overrideConfig(overrides)
     }
