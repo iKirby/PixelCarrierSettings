@@ -13,6 +13,7 @@ android {
         targetSdk = 36
         versionCode = 10
         versionName = "10"
+        setProperty("archivesBaseName", "PixelCarrierSettings")
     }
 
     buildTypes {

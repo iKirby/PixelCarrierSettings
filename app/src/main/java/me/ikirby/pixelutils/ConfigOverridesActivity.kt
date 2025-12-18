@@ -110,8 +110,10 @@ class ConfigOverridesActivity : Activity() {
         val overrides = PersistableBundle().apply {
             putBoolean(CarrierConfigManager.KEY_CARRIER_WFC_IMS_AVAILABLE_BOOL, true)
             putBoolean(CarrierConfigManager.KEY_CARRIER_WFC_SUPPORTS_WIFI_ONLY_BOOL, true)
+            putBoolean(CarrierConfigManager.KEY_CARRIER_DEFAULT_WFC_IMS_ROAMING_ENABLED_BOOL, true)
             putBoolean(CarrierConfigManager.KEY_EDITABLE_WFC_MODE_BOOL, true)
             putBoolean(CarrierConfigManager.KEY_EDITABLE_WFC_ROAMING_MODE_BOOL, true)
+            putInt(CarrierConfigManager.KEY_WFC_SPN_FORMAT_IDX_INT, 4)
         }
         overrideConfig(overrides)
     }
@@ -125,6 +127,7 @@ class ConfigOverridesActivity : Activity() {
         }
         overrideConfig(overrides)
     }
+
     private fun overrideSignalInflate() {
         val overrides = PersistableBundle().apply {
             putBoolean(CarrierConfigManager.KEY_INFLATE_SIGNAL_STRENGTH_BOOL, false)
