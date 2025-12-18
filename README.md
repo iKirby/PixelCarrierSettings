@@ -30,6 +30,8 @@ From "Config overrides" menu, you can override carrier configurations (the same 
     * `KEY_EDITABLE_WFC_ROAMING_MODE_BOOL`
     * `KEY_WFC_SPN_FORMAT_IDX_INT`
 - **Override 5G signal threshold**: Sets `KEY_5G_NR_SSRSRP_THRESHOLDS_INT_ARRAY` to `[-115, -105, -95, -85]`. This option exists because with AOSP's default values I only get 1 bar 5G signal in my area, but on other devices the signal are full or at least 2 bars (dBm values are the same).
+- **Disable Signal Inflate (5 bars to 4)**: Sets `KEY_INFLATE_SIGNAL_STRENGTH_BOOL` to false. Changes signal icon from 5 bars to 4, also makes unified signal icon possible if using 2 SIMs.
+- **Show IMS status in SIM status**: Sets `KEY_SHOW_IMS_REGISTRATION_STATUS_BOOL` to true. This adds `IMS registration state` to About phone - SIM status. Android 16 QPR3 Beta 1 has a bug which crashes `com.android.phone` when opening PhoneInformation or PhoneInformationV2 test menu. This option allows seeing IMS status without going to the menu.
 
 If you need manual/custom overrides, please check out [Pixel IMS](https://github.com/kyujin-cho/pixel-volte-patch).
 
