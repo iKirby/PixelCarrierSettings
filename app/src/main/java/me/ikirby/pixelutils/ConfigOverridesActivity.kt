@@ -38,6 +38,7 @@ class ConfigOverridesActivity : Activity() {
         binding.btnResetConfig.setOnClickListener { resetConfig() }
         binding.btnSignalInflate.setOnClickListener { overrideSignalInflate() }
         binding.btnShowIMSStatus.setOnClickListener { overrideShowIMSStatus() }
+        binding.btnShow4G.setOnClickListener { overrideShow4G() }
     }
 
     override fun onMenuItemSelected(featureId: Int, item: MenuItem): Boolean {
@@ -139,6 +140,13 @@ class ConfigOverridesActivity : Activity() {
     private fun overrideSignalInflate() {
         val overrides = PersistableBundle().apply {
             putBoolean(CarrierConfigManager.KEY_INFLATE_SIGNAL_STRENGTH_BOOL, false)
+        }
+        overrideConfig(overrides)
+    }
+
+    private fun overrideShow4G() {
+        val overrides = PersistableBundle().apply {
+            putBoolean(CarrierConfigManager.KEY_SHOW_4G_FOR_LTE_DATA_ICON_BOOL, true)
         }
         overrideConfig(overrides)
     }

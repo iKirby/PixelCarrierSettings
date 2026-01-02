@@ -23,4 +23,5 @@
     <string name="init_failed">Initialization failed</string>
     <string name="signal_inflate">Disable Signal Inflate (5 bars to 4)</string>
     <string name="show_ims_status">Show IMS status in SIM status</string>
+    <string name="show_4g_instead">Show 4G instead of LTE</string>
 </resources>

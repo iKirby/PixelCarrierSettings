@@ -69,6 +69,13 @@
             android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/btnShow4G"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/show_4g_instead"
+            android:textAllCaps="false" />
+
+        <Button
             android:id="@+id/btnResetConfig"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
