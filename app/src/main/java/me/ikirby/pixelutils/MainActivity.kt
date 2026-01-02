@@ -52,6 +52,7 @@ class MainActivity : Activity() {
             }
             startActivity(intent)
         }
+        binding.btnDisableIMS0.setOnClickListener { disableIMSProvisioning(subIdPhone0) }
 
         binding.btnEnableIMS1.setOnClickListener { enableIMSProvisioning(subIdPhone1) }
         binding.btnResetIMS1.setOnClickListener { resetIMS(subIdPhone1) }
@@ -62,6 +63,7 @@ class MainActivity : Activity() {
             }
             startActivity(intent)
         }
+        binding.btnDisableIMS1.setOnClickListener { disableIMSProvisioning(subIdPhone1) }
 
         Shizuku.addRequestPermissionResultListener(shizukuPermissionListener)
     }
@@ -143,6 +145,15 @@ class MainActivity : Activity() {
             ProvisioningManager.PROVISIONING_VALUE_ENABLED
         )
         showToast(R.string.voims_enabled)
+    }
+
+    private fun disableIMSProvisioning(subId: Int) {
+        telephony.setImsProvisioningInt(
+            subId,
+            ProvisioningManager.KEY_VOIMS_OPT_IN_STATUS,
+            ProvisioningManager.PROVISIONING_VALUE_DISABLED
+        )
+        showToast(R.string.voims_disabled)
     }
 
     private fun resetIMS(subId: Int) {

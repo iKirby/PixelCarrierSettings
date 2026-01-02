@@ -43,6 +43,13 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/btnDisableIMS0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disable_voims"
+                android:textAllCaps="false" />
+
+            <Button
                 android:id="@+id/btnResetIMS0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,6 +87,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/config_overrides"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnDisableIMS1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disable_voims"
                 android:textAllCaps="false" />
 
             <Button

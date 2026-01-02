@@ -5,6 +5,8 @@
     <string name="enable_voims">Enable VoLTE</string>
     <string name="voims_enabled">VoLTE enabled</string>
     <string name="voims_already_enabled">VoLTE is already enabled for this SIM</string>
+    <string name="disable_voims">Restore VoLTE default behavior</string>
+    <string name="voims_disabled">VoLTE behavior restored</string>
     <string name="reset_ims">Reset IMS</string>
     <string name="ims_reset">IMS has been reset</string>
     <string name="no_active_sim">No active SIM is found on this device</string>
