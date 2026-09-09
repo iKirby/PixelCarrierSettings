@@ -15,7 +15,6 @@ android {
         targetSdk = 36
         versionCode = 12
         versionName = "12"
-        setProperty("archivesBaseName", "PixelCarrierSettings")
     }
 
     buildTypes {
@@ -42,6 +41,10 @@ android {
         viewBinding = true
         buildConfig = true
     }
+}
+
+base {
+    archivesName = "PixelCarrierSettings"
 }
 
 dependencies {
