@@ -6,8 +6,8 @@ import android.app.Instrumentation
 import android.content.Context
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.os.Process
 import android.os.ServiceManager
-import android.system.Os
 import android.telephony.CarrierConfigManager
 import rikka.shizuku.ShizukuBinderWrapper
 
@@ -30,12 +30,30 @@ class InstrumentationHelper : Instrumentation() {
         val ams = IActivityManager.Stub.asInterface(
             ShizukuBinderWrapper(ServiceManager.getService(Context.ACTIVITY_SERVICE))
         )
-        ams.startDelegateShellPermissionIdentity(Os.getuid(), null)
+        val uid = Process.myUid()
+        ams.startDelegateShellPermissionIdentity(uid, null)
         try {
             val ccm = context.getSystemService(CarrierConfigManager::class.java)
             ccm.overrideConfig(subId, overrides, persistent)
+        } catch (e: Exception) {
+            e.printStackTrace()
         } finally {
-            ams.stopDelegateShellPermissionIdentity()
+            try {
+                ams.stopDelegateShellPermissionIdentity()
+            } catch (e: Throwable) {
+                e.printStackTrace()
+                try {
+                    val clazz = ams.javaClass
+                    val method = clazz.getDeclaredMethod(
+                        "stopDelegateShellPermissionIdentity",
+                        Int::class.java
+                    )
+                    method.isAccessible = true
+                    method.invoke(ams, uid)
+                } catch (e: Throwable) {
+                    e.printStackTrace()
+                }
+            }
         }
         finish(0, null)
     }
