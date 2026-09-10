@@ -1,6 +1,5 @@
 [versions]
 agp = "9.4.0"
-kotlin = "2.3.0"
 shizuku = "13.1.5"
 hiddenapibypass = "6.1"
 
@@ -11,5 +10,4 @@ hiddenapibypass = { group = "org.lsposed.hiddenapibypass", name = "hiddenapibypa
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
