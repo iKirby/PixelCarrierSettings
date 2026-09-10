@@ -39,6 +39,8 @@ class ConfigOverridesActivity : Activity() {
         binding.btnSignalInflate.setOnClickListener { overrideSignalInflate() }
         binding.btnShowIMSStatus.setOnClickListener { overrideShowIMSStatus() }
         binding.btnShow4G.setOnClickListener { overrideShow4G() }
+        binding.btnEnableLTEPlus.setOnClickListener { overrideEnableLTEPlus() }
+        binding.btnShowLTEPlusIcon.setOnClickListener { overrideShowLTEPlusIcon() }
     }
 
     override fun onMenuItemSelected(featureId: Int, item: MenuItem): Boolean {
@@ -147,6 +149,22 @@ class ConfigOverridesActivity : Activity() {
     private fun overrideShow4G() {
         val overrides = PersistableBundle().apply {
             putBoolean(CarrierConfigManager.KEY_SHOW_4G_FOR_LTE_DATA_ICON_BOOL, true)
+        }
+        overrideConfig(overrides)
+    }
+
+    private fun overrideEnableLTEPlus() {
+        val overrides = PersistableBundle().apply {
+            putBoolean(CarrierConfigManager.KEY_EDITABLE_ENHANCED_4G_LTE_BOOL, true)
+            putBoolean(CarrierConfigManager.KEY_ENHANCED_4G_LTE_ON_BY_DEFAULT_BOOL, true)
+            putBoolean(CarrierConfigManager.KEY_HIDE_ENHANCED_4G_LTE_BOOL, false)
+        }
+        overrideConfig(overrides)
+    }
+
+    private fun overrideShowLTEPlusIcon() {
+        val overrides = PersistableBundle().apply {
+            putBoolean(CarrierConfigManager.KEY_HIDE_LTE_PLUS_DATA_ICON_BOOL, false)
         }
         overrideConfig(overrides)
     }

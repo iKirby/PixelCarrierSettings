@@ -76,6 +76,20 @@
             android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/btnEnableLTEPlus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enable_lte_plus"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnShowLTEPlusIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/show_lte_plus_icon"
+            android:textAllCaps="false" />
+
+        <Button
             android:id="@+id/btnResetConfig"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
