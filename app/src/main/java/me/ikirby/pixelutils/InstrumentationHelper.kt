@@ -48,7 +48,6 @@ class InstrumentationHelper : Instrumentation() {
                         "stopDelegateShellPermissionIdentity",
                         Int::class.java
                     )
-                    method.isAccessible = true
                     method.invoke(ams, uid)
                 } catch (e: Throwable) {
                     e.printStackTrace()
