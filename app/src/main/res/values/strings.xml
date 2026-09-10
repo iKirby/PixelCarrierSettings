@@ -21,7 +21,7 @@
     <string name="reset_config">Reset to system default</string>
     <string name="override_notes">NOTE: These settings are NOT persistent and will be reset upon system reboot.</string>
     <string name="init_failed">Initialization failed</string>
-    <string name="signal_inflate">Disable Signal Inflate (5 bars to 4)</string>
+    <string name="signal_inflate">Disable signal inflate (5 bars to 4)</string>
     <string name="show_ims_status">Show IMS status in SIM status</string>
     <string name="show_4g_instead">Show 4G instead of LTE</string>
     <string name="enable_lte_plus">Enable LTE+</string>
