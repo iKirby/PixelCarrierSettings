@@ -10,8 +10,8 @@ android {
         applicationId = "me.ikirby.pixelutils"
         minSdk = 34
         targetSdk = 36
-        versionCode = 12
-        versionName = "12"
+        versionCode = 13
+        versionName = "13"
     }
 
     buildTypes {
